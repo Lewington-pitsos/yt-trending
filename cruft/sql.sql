@@ -1,0 +1,10 @@
+CREATE TABLE trending (
+  id SERIAL,
+  title VARCHAR(220) NOT NULL,
+  summary VARCHAR(1000) NOT NULL,
+  thumbnail BYTEA NOT NULL,
+  link VARCHAR(400) NOT NULL,
+  scraped_at TIMESTAMP NOT NULL DEFAULT NOW(),
+  UNIQUE (title),
+  PRIMARY KEY(id)
+);
